@@ -30,8 +30,8 @@ variable "attributes" {
 
 variable "managedby" {
   type        = string
-  default     = "cypik"
-  description = "ManagedBy, eg 'cypik'."
+  default     = "info@cypik.com"
+  description = "ManagedBy, eg 'info@cypik.com'."
 }
 
 #Module      : KEY PAIR module variables.
@@ -48,7 +48,7 @@ variable "enable_key_pair" {
   description = "A boolean flag to enable/disable key pair."
 }
 
-#      : PRIVATE KEY
+#### : PRIVATE KEY
 variable "create_private_key_enabled" {
   type        = bool
   default     = false

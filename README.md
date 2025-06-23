@@ -22,7 +22,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 module "private_keypair" {
   source                     = "cypik/Keypair/aws"
-  version                    = "1.0.1"
+  version                    = "1.0.2"
   name                       = "private-key"
   environment                = "test"
   label_order                = ["name", "environment"]
@@ -35,11 +35,11 @@ module "private_keypair" {
 ```hcl
 module "public_keypair" {
   source      = "cypik/Keypair/aws"
-  version     = "1.0.1"
+  version     = "1.0.2"
   name        = "public-key"
   environment = "test"
   label_order = ["name", "environment"]
-  public_key  = "ssh-rsa FMR8DFXgwM4rLmXdXXXXXXXXXXXXXXXXXXXXXXXXXtYxXSEb66zp8b/ZcICT2kqMC6suEO3U7IG8wasXCoxOyJ5lqBi8xrmQKBgTZKk6EvO9SSpSishpAP2hafnIuP29RqipraT9UvNeMSbM3/OTjV9I2/KHd/YfSzrUQbnQ6zTgNawyZ8CaRo/Intot3HgU/5PsOKPcTlarb0sFXuWDhdcE+/8TPsjFTPOzMFBDr+H11Oq+cxMoQ/YMXLo/KmokM/km/NfLvEvscuDFzA7JLURiaV33MoQxxIfaTwvrQZ9UJ4gdzd4WhF1sVNB3MP7z07I8pBepJVwca1fTWI9hvn6xK3a6nfD6p8gKiP5xlINMZX7Oi9tmhFuv4vxkYiGZvAI12va9InJFZUQEHmJaIr4g7Faczl5oFK6TYc1FRut9ve4v0JKbz7Od3Uwyqd6rSeHxm/obp1E= satish@satish"
+  public_key  = "ssh-rsa FMR8DFXgwM4rLmXdXXXXXXXXXXXXXXXXXXXXXXXXXtYQKRorSeHxm/obp1E= "
 
 }
 ```
@@ -58,22 +58,22 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.6 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 5.32.1 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 3.0.0 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.82.2 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.6 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | >= 5.32.1 |
-| <a name="provider_tls"></a> [tls](#provider\_tls) | >= 3.0.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.82.2 |
+| <a name="provider_tls"></a> [tls](#provider\_tls) | >= 4.0.6 |
 
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.1 |
+| <a name="module_labels"></a> [labels](#module\_labels) | cypik/labels/aws | 1.0.2 |
 
 ## Resources
 
@@ -91,7 +91,7 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 | <a name="input_enable_key_pair"></a> [enable\_key\_pair](#input\_enable\_key\_pair) | A boolean flag to enable/disable key pair. | `bool` | `true` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Environment (e.g. `prod`, `dev`, `staging`). | `string` | `""` | no |
 | <a name="input_label_order"></a> [label\_order](#input\_label\_order) | Label order, e.g. `name`,`application`. | `list(any)` | <pre>[<br>  "name",<br>  "environment"<br>]</pre> | no |
-| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'cypik'. | `string` | `"cypik"` | no |
+| <a name="input_managedby"></a> [managedby](#input\_managedby) | ManagedBy, eg 'info@cypik.com'. | `string` | `"info@cypik.com"` | no |
 | <a name="input_name"></a> [name](#input\_name) | Name  (e.g. `app` or `cluster`). | `string` | `""` | no |
 | <a name="input_private_key_algorithm"></a> [private\_key\_algorithm](#input\_private\_key\_algorithm) | Name of the algorithm to use when generating the private key. Currently-supported values are `RSA` and `ED25519` | `string` | `"RSA"` | no |
 | <a name="input_public_key"></a> [public\_key](#input\_public\_key) | Name  (e.g. `ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD3F6tyPEFEzV0LX3X8BsXdMsQ`). | `string` | `""` | no |
