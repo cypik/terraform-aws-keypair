@@ -54,6 +54,7 @@ variable "create_private_key_enabled" {
   default     = false
   description = "Determines whether a private key will be created"
 }
+
 variable "private_key_algorithm" {
   type        = string
   default     = "RSA"

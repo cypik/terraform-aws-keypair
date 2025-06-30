@@ -22,7 +22,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 module "private_keypair" {
   source                     = "cypik/Keypair/aws"
-  version                    = "1.0.2"
+  version                    = "1.0.3"
   name                       = "private-key"
   environment                = "test"
   label_order                = ["name", "environment"]
@@ -35,7 +35,7 @@ module "private_keypair" {
 ```hcl
 module "public_keypair" {
   source      = "cypik/Keypair/aws"
-  version     = "1.0.2"
+  version     = "1.0.3"
   name        = "public-key"
   environment = "test"
   label_order = ["name", "environment"]
@@ -58,16 +58,16 @@ This project is licensed under the **MIT** License - see the [LICENSE](https://g
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9.5 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 5.82.2 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >= 4.0.6 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >=1.12.1 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | >=5.82.2 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | >=4.1.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 5.82.2 |
-| <a name="provider_tls"></a> [tls](#provider\_tls) | >= 4.0.6 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | >=5.82.2 |
+| <a name="provider_tls"></a> [tls](#provider\_tls) | >=4.1.0 |
 
 ## Modules
 
