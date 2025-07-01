@@ -22,7 +22,7 @@ To use this module, you should have Terraform installed and configured for AWS. 
 ```hcl
 module "private_keypair" {
   source                     = "cypik/Keypair/aws"
-  version                    = "1.0.3"
+  version                    = "1.0.2"
   name                       = "private-key"
   environment                = "test"
   label_order                = ["name", "environment"]
@@ -31,11 +31,11 @@ module "private_keypair" {
 }
 ```
 
-## Example: s3 complete
+## Example: public_key
 ```hcl
 module "public_keypair" {
   source      = "cypik/Keypair/aws"
-  version     = "1.0.3"
+  version     = "1.0.2"
   name        = "public-key"
   environment = "test"
   label_order = ["name", "environment"]
